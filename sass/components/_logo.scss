@@ -1,0 +1,35 @@
+.logo {
+  &web {
+    color: var(--accent-color);
+    font-family: Raleway;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+  & {
+    color: var(--title-text-color);
+    font-family: Raleway;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+
+  /* ----------------------------------------Вторая часть логотипа футера------------------------ */
+  &web {
+    color: var(--accent-color);
+  }
+
+  &-footer {
+    display: block;
+    margin-bottom: 20px;
+    color: var(--white-color);
+    font-family: Raleway;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+
+.header__logo {
+  padding: 24px 0 25px 0;
+  margin-right: 93px;
+  display: block;
+  animation: rotateY 3000ms infinite alternate backwards ease-in-out 1000ms;
+}

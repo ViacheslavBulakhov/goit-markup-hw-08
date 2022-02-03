@@ -1,0 +1,103 @@
+/* ----------------------------------------------------------Секция наша команда --------------*/
+
+.team {
+  font-weight: 700;
+  // font-size: 36px;
+  font-size: 28px;
+  // line-height: 1.2;
+  line-height: 1.17;
+
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  &-section {
+    background-color: var(--button-background);
+    // padding-bottom: 94px;
+    padding: 60px 0;
+  }
+
+  // &-list {
+  //   display: flex;
+
+  //   margin-top: calc(-1 * var(--size-margin-one));
+  //   margin-left: calc(-1 * var(--size-margin-one));
+  // }
+  // &-list > &-item {
+  //   flex-basis: calc(100% / 4 - var(--size-margin-one));
+  //   margin-left: var(--size-margin-one);
+  //   margin-top: var(--size-margin-one);
+  // }
+  &-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+
+    text-align: center;
+  }
+  /* Текст секции */
+  &-text {
+    font-size: 16px;
+    line-height: 1.2;
+
+    text-align: center;
+    margin-top: 10px;
+    color: var(--primary-white-color);
+  }
+  &-item {
+    margin: 15px;
+  }
+  &-item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: calc(2 * 15px);
+    }
+  }
+}
+
+.card {
+  background-color: white;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  border-radius: 0px 0px 4px 4px;
+
+  &-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  &-social-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  &-social-item + .card-social-item {
+    margin-left: 10px;
+  }
+  &-social-icon {
+    fill: currentColor;
+  }
+  &-social-link {
+    width: 44px;
+    height: 44px;
+    background-color: var(--white-color);
+    @extend %center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #afb1b8;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &-social-link:hover,
+  &-social-link:focus {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+  }
+}
+.card-team_image {
+  width: 450px;
+  height: 460px;
+}

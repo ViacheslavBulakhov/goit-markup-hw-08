@@ -1,0 +1,41 @@
+/* Заголовок секции */
+.main-third-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+
+  padding-bottom: 50px;
+}
+.main-third-list {
+  align-content: center;
+  display: flex;
+  margin-right: -30px;
+  justify-content: center;
+  margin-right: -30px;
+}
+.main-third-item {
+  width: calc(100% / 3 - 30);
+  margin-right: 30px;
+
+  position: relative;
+}
+.card-label-text {
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.card-label {
+  position: absolute;
+  bottom: 0px;
+
+  width: 370px;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  text-align: center;
+
+  padding-top: 27px;
+}
