@@ -1,3 +1,8 @@
+.main-third-section {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
 /* Заголовок секции */
 .main-third-title {
   font-weight: 700;

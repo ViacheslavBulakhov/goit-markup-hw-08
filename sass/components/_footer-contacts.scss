@@ -17,12 +17,20 @@
   }
 
   &-left {
-    margin-right: 70px;
+    margin-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+      margin-right: 70px;
+    }
   }
   &-item {
     margin-bottom: 9px;
   }
   &-item:last-child {
     margin-bottom: 0;
+  }
+  &-list {
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
   }
 }

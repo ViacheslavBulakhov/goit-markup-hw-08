@@ -4,8 +4,11 @@
     margin-left: auto;
   }
   &-wrap {
-    @extend %center;
-    justify-content: space-between;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: center;
+      // justify-content: space-between;
+    }
   }
   &-submit {
     width: 200px;
@@ -15,10 +18,13 @@
     @extend %center;
 
     box-shadow: 0px, 4px rgba(0, 0, 0, 0.15);
+    @media screen and(max-width:1190px) {
+      margin: 0 auto;
+    }
   }
   &-footer {
     height: 50px;
-    width: 358px;
+    width: 100%;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
@@ -27,10 +33,24 @@
     color: var(--white-color);
 
     padding: 15px 0 15px 16px;
-    margin-right: 12px;
+
     display: block;
 
     outline: none;
+
+    @media screen and (max-width: 1199px) {
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+      width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin-right: 12px;
+    }
   }
 }
 .submit-icon {

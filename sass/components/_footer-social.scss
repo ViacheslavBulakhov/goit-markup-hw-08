@@ -1,32 +1,40 @@
 /* -----------------------------footer-social---------------------------------- */
-.footer-main-container {
-  display: flex;
-  align-items: baseline;
-}
-.footer-right {
-  display: block;
-  align-items: baseline;
 
-  margin-right: 93px;
+.footer-right {
+  @media screen and (min-width: 1200px) {
+    display: block;
+    align-items: baseline;
+
+    margin-right: 93px;
+  }
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
 }
 
 .footer-card {
   &-title {
     color: #ffffff;
     font-weight: 700;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
     font-size: 14px;
+    line-height: 1.14;
     text-transform: uppercase;
 
     color: #ffffff;
 
     margin-bottom: 20px;
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
   }
 
   &-list {
     @extend %center;
-    justify-content: left;
+    justify-content: center;
+
+    // @media screen and (min-width: 1200px) {
+    //   // justify-content: left;
+    // }
   }
   &-item {
     width: 44px;

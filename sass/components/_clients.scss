@@ -11,24 +11,35 @@
 
     margin-bottom: 30px;
 
-    // line-height: 1.2;
-    // font-size: 36px;
-    // margin-bottom: 50px;
+    @media screen and (min-width: 1200px) {
+      line-height: 1.19;
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
   }
   &-icon {
     &-list {
       @extend %center;
       justify-content: center;
       flex-wrap: wrap;
-      margin: calc(-1 * 15px);
+      margin-top: calc(-1 * var(--size-margin-one));
+      margin-left: calc(-1 * var(--size-margin-one));
     }
-    // &-item + &-item {
-    //   margin-left: 30px;
+    &-item {
+      margin-left: var(--size-margin-one);
+      margin-top: var(--size-margin-one);
+      @media screen and(max-width:767px) {
+        margin-left: var(--size-margin-one);
+        margin-top: var(--size-margin-one);
+        flex-basis: calc(100% / 2 - var(--size-margin-one));
+      }
+      @media screen and(min-width:768px) and(max-width:1199px) {
+        margin-left: var(--size-margin-one);
+        margin-top: var(--size-margin-one);
+        flex-basis: calc(100% / 3 - var(--size-margin-one));
+      }
+    }
   }
-}
-.clients-icon-item {
-  margin: 15px;
-  width: calc(100% / 2 - (2 * 15px));
 }
 
 .card-clients {
@@ -36,7 +47,6 @@
     fill: currentColor;
   }
   &-link {
-    // width: 170px;
     height: 92px;
 
     @extend %center;
@@ -52,6 +62,12 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width: 768px) {
+      width: 226px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 170px;
+    }
   }
   &-link:hover,
   &-link:focus {
