@@ -1,17 +1,15 @@
 /* ----------------------------------------------------------Шапка страницы----------- */
-.header {
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   border-bottom-color: var(--background-for-header);
   border-bottom-width: 1px;
   border-bottom-style: solid;
-
-  &__container {
-    @extend %center;
-  }
-  &-connect {
-    @extend %center;
-  }
 }
 .header-connect {
+  display: flex;
+  align-items: center;
   &__contact {
     font-style: normal;
     font-weight: 500;
@@ -26,6 +24,9 @@
   &__contact:focus {
     color: var(--accent-color);
   }
+  @media screen and(max-width:767px) {
+    display: none;
+  }
 }
 
 .header-icon {
@@ -34,6 +35,9 @@
 }
 
 .header-list {
+  @media screen and(max-width:767px) {
+    display: none;
+  }
   @extend %center;
 
   &__item {
@@ -54,7 +58,6 @@
 
 .nav {
   @extend %center;
-  margin-right: 305px;
 }
 .header-list__contact {
   margin-right: 50px;

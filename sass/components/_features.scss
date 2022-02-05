@@ -1,4 +1,9 @@
 /* ----Section-features------ */
+.main-second-item:not(:last-child) {
+  @media screen and(min-width:1200px) {
+    margin-right: 30px;
+  }
+}
 .main-second {
   &-section {
     margin: 0 auto;
@@ -9,17 +14,30 @@
   &-list {
     // display: flex;
     margin: calc(-1 * 15px);
+    @media screen and(min-width:768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @media screen and(min-width:1200px) {
+      flex-wrap: nowrap;
+    }
   }
   &-item {
-    // width: 450px;
-    // margin-right: 30px;
-    margin: 15px;
+    width: 450px;
+    @media screen and(max-width:767px) {
+      margin-bottom: calc(2 * 15px);
+    }
+
+    @media screen and(min-width:768px) and (max-width: 1199px) {
+      width: calc(100% / 2 - (2 * 15px));
+      margin: 15px;
+      max-width: 354px;
+    }
+    @media screen and(min-width:1200px) {
+      max-width: 270px;
+    }
   }
 
-  &-item:last-child {
-    margin-right: 0;
-    margin-bottom: -15px;
-  }
   /* Заголовки секции */
   &-title {
     font-weight: 700;
@@ -34,36 +52,35 @@
     color: var(--primary-white-color);
   }
 }
+@media screen and (max-width: 767px) {
+  .main-second-item:not(:last-child) {
+    // margin-bottom: 30px;
+    margin-bottom: calc(2 * 15px);
+  }
+}
 
 .main-card {
   &-container {
     width: 100%;
+    // max-width: 450px;
     height: 120px;
     margin-bottom: 30px;
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    @media screen and (min-width: 480px) {
-      max-width: 450px;
-    }
-    @media screen and (min-width: 768px) {
-    }
-    @media screen and (min-width: 1200px) {
-      justify-content: center;
-    }
-  }
-
-  &-item {
-    height: 120px;
-    border-radius: 4px;
     background-color: #f5f4fa;
 
+    // @media screen and (min-width: 480px) {
+    //   max-width: 450px;
+    // }
+    // @media screen and (min-width: 768px) {
+    // }
+    // @media screen and (min-width: 1200px) {
+    //   justify-content: center;
+    // }
+  }
+  &-list {
     margin-bottom: 30px;
   }
-
-  // &-item + &-item {
-  //   margin-left: 30px;
-  // }
 }
