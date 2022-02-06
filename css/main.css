@@ -134,14 +134,44 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom-color: var(--background-for-header);
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+  margin: 0 auto;
 }
 
-.header-connect {
-  display: flex;
-  align-items: center;
+@media screen and (max-width: 767px) {
+  .header__container {
+    max-width: 480px;
+    padding: 0 10px 0 15px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header__container {
+    max-width: 768px;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__container {
+    width: 1200px;
+  }
+}
+
+.header {
+  border-bottom: 1px solid var(--background-for-header);
+}
+
+@media screen and (max-width: 1199px) {
+  .header-connect {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-connect {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header-connect__contact {
@@ -188,16 +218,20 @@ button {
   color: var(--accent-color);
 }
 
-.header-list__contact {
+.header-list__contact:not(:last-child) {
   margin-right: 50px;
 }
 
-.header-list__contact:last-child {
-  margin-right: 0;
+@media screen and (max-width: 1199px) {
+  .header-connect__item {
+    margin-bottom: 10px;
+  }
 }
 
-.header-connect__item {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .header-connect__item {
+    margin-right: 30px;
+  }
 }
 
 .header-connect__item:last-child {
@@ -261,10 +295,23 @@ button {
 }
 
 .header__logo {
-  padding: 24px 0 25px 0;
-  margin-right: 93px;
+  padding: 16px 0;
   display: block;
   animation: rotateY 3000ms infinite alternate backwards ease-in-out 1000ms;
+}
+
+@media screen and (min-width: 768px) {
+  .header__logo {
+    padding: 26px 0;
+    margin-right: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-right: 93px;
+    padding: 24px 0 25px 0;
+  }
 }
 
 .main-first-section {
@@ -573,7 +620,8 @@ button {
 }
 
 .main-second-item {
-  width: 450px;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 767px) {
@@ -892,6 +940,14 @@ button {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-main-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .footer-main-container {
     display: flex;
@@ -1082,20 +1138,42 @@ button {
 
 /* -------------------------- Main -------portfolio----*/
 .portfolio-main {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-main {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 /* ----------------------------Кнопки портфолио------------- */
 .button-list {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767px) {
+  .button-list {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .button-list {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .button-list {
+    margin-bottom: 50px;
+  }
 }
 
 .button-item {
-  font-family: Roboto;
-  font-style: 500;
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.03em;
@@ -1103,6 +1181,7 @@ button {
   cursor: pointer;
   font-family: inherit;
   margin-right: 8px;
+  margin-bottom: 15px;
   padding: 6px 22px;
   border-radius: 4px;
   overflow: hidden;
@@ -1122,31 +1201,53 @@ button {
   color: var(--accent-color);
 }
 
-.main-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--size-margin-one));
-  margin-left: calc(-1 * var(--size-margin-one));
+@media screen and (min-width: 768px) {
+  .main-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * 15px);
+    margin-left: calc(-1 * 15px);
+  }
 }
 
-.main-item {
-  flex-basis: calc(100% / 3 - var(--size-margin-one));
-  margin-left: var(--size-margin-one);
-  margin-top: var(--size-margin-one);
+@media screen and (min-width: 1200px) {
+  .main-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--size-margin-one));
+    margin-left: calc(-1 * var(--size-margin-one));
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main-item {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-item {
+    max-width: 354px;
+    flex-basis: calc(100% / 2 - 15px);
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-item {
+    flex-basis: calc(100% / 3 - var(--size-margin-one));
+    margin-left: var(--size-margin-one);
+    margin-top: var(--size-margin-one);
+  }
 }
 
 .card-text {
   padding: 20px 24px;
-  border-right-width: 1px;
-  border-right-style: solid;
-  border-right-color: var(--border-card-portfolio);
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: var(--border-card-portfolio);
-  border-bottom-color: var(--border-card-portfolio);
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+  border-right: 1px solid var(--border-card-portfolio);
+  border-left: 1px solid var(--border-card-portfolio);
+  border-bottom: 1px solid var(--border-card-portfolio);
 }
 
 .card-portfolio {
@@ -1155,6 +1256,10 @@ button {
 
 .card-portfolio:hover, .card-portfolio:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-img {
+  width: 100%;
 }
 
 /* -------------Text on IMG--------------- */

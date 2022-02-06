@@ -17,29 +17,43 @@
 /* -------------------------- Main -------portfolio----*/
 
 .portfolio-main {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
+  @media screen and(min-width:1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 /* ----------------------------Кнопки портфолио------------- */
 .button {
   &-list {
     display: flex;
+    flex-wrap: wrap;
 
-    margin-bottom: 50px;
-    justify-content: center;
+    @media screen and(max-width:767px) {
+      margin-bottom: 40px;
+    }
+    @media screen and(min-width:768px) {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    @media screen and(min-width:1200px) {
+      margin-bottom: 50px;
+    }
   }
 
   &-item {
-    font-family: Roboto;
-    font-style: 500;
     font-size: 16px;
     line-height: 1.8;
     letter-spacing: 0.03em;
+
     background-color: var(--button-background);
     cursor: pointer;
     font-family: inherit;
+
     margin-right: 8px;
+    margin-bottom: 15px;
     padding: 6px 22px;
 
     border-radius: 4px;
@@ -64,33 +78,45 @@
 }
 .main {
   &-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: calc(-1 * var(--size-margin-one));
-    margin-left: calc(-1 * var(--size-margin-one));
+    @media screen and(min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(-1 * 15px);
+      margin-left: calc(-1 * 15px);
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: calc(-1 * var(--size-margin-one));
+      margin-left: calc(-1 * var(--size-margin-one));
+    }
   }
   &-item {
-    flex-basis: calc(100% / 3 - var(--size-margin-one));
-    margin-left: var(--size-margin-one);
-    margin-top: var(--size-margin-one);
+    @media screen and(max-width: 767px) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and(min-width: 768px) {
+      max-width: 354px;
+      flex-basis: calc(100% / 2 - 15px);
+      margin-left: 15px;
+      margin-top: 15px;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc(100% / 3 - var(--size-margin-one));
+      margin-left: var(--size-margin-one);
+      margin-top: var(--size-margin-one);
+    }
   }
 }
 .card {
   &-text {
     padding: 20px 24px;
 
-    border-right-width: 1px;
-    border-right-style: solid;
-    border-right-color: var(--border-card-portfolio);
-
-    border-left-width: 1px;
-    border-left-style: solid;
-    border-left-color: var(--border-card-portfolio);
-
-    border-bottom-color: var(--border-card-portfolio);
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
+    border-right: 1px solid var(--border-card-portfolio);
+    border-left: 1px solid var(--border-card-portfolio);
+    border-bottom: 1px solid var(--border-card-portfolio);
   }
   &-portfolio {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -103,6 +129,9 @@
   }
 }
 
+.portfolio-img {
+  width: 100%;
+}
 /* -------------Text on IMG--------------- */
 .text-img-wrap {
   position: relative;
