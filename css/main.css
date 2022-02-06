@@ -539,6 +539,13 @@ button {
   }
 }
 
+@media screen and (max-width: 470px) {
+  .modal {
+    width: 370px;
+    height: 609px;
+  }
+}
+
 .modal-close {
   width: 30px;
   height: 30px;
@@ -729,6 +736,18 @@ button {
 
 .main-second-section {
   margin: 0 auto;
+}
+
+@media screen and (max-width: 470px) {
+  .main-second-section {
+    width: 370px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-second-section {
+    margin-bottom: -94px;
+  }
 }
 
 .main-second-list {
