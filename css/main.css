@@ -37,6 +37,12 @@ body {
   letter-spacing: 0.03em;
 }
 
+@media screen and (min-width: 320px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
 p,
 h1,
 h2,
