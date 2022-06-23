@@ -31,7 +31,6 @@
 
 body {
   color: var(--title-text-color);
-  background-color: var(--white-color);
   font-family: Roboto, sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
@@ -132,7 +131,7 @@ button {
 
 /* Main contant */
 .main {
-  background-color: var(--white-color);
+  background: radial-gradient(circle, rgba(92, 83, 232, 0.93631) 13%, #790960 66%, #00ffef 100%);
 }
 
 /* ----------------------------------------------------------Шапка страницы----------- */
@@ -164,7 +163,7 @@ button {
 }
 
 .header {
-  border-bottom: 1px solid var(--background-for-header);
+  background: radial-gradient(circle, rgba(92, 83, 232, 0.93631) 13%, rgba(121, 9, 97, 0.637) 66%, #00ffef 100%);
 }
 
 @media screen and (max-width: 1199px) {
@@ -185,12 +184,12 @@ button {
   font-weight: 500;
   line-height: 1.7;
   letter-spacing: 0.02em;
-  color: var(--primary-white-color);
+  color: black;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-connect__contact:hover, .header-connect__contact:focus {
-  color: var(--accent-color);
+  color: aqua;
 }
 
 @media screen and (max-width: 767px) {
@@ -221,7 +220,7 @@ button {
 }
 
 .header-list__item:hover, .header-list__item:focus {
-  color: var(--accent-color);
+  color: aqua;
 }
 
 .header-list__contact:not(:last-child) {
@@ -482,7 +481,7 @@ button {
   max-width: 480px;
   margin: 0 auto;
   padding: 118px 0;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img/hero-mob-img-1x.jpg);
+  background-image: url(../images/hero-img/hero-mob-img-1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   flex-grow: 1;
@@ -491,20 +490,20 @@ button {
 
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .main-first-section {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img/hero-mob-img-2x.jpg);
+    background-image: url(../images/hero-img/hero-mob-img-2x.jpg);
   }
 }
 
 @media screen and (min-width: 768px) {
   .main-first-section {
     max-width: 768px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img/hero-tab-img-1x.jpg);
+    background-image: url(../images/hero-img/hero-tab-img-1x.jpg);
   }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .main-first-section {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img/hero-tab-img-2x.jpg);
+    background-image: url(../images/hero-img/hero-tab-img-2x.jpg);
   }
 }
 
@@ -513,13 +512,13 @@ button {
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img/hero-desk-img-1x.jpg);
+    background-image: url(../images/hero-img/hero-desk-img-1x.jpg);
   }
 }
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .main-first-section {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img/hero-desk-img-2x.jpg);
+    background-image: url(../images/hero-img/hero-desk-img-2x.jpg);
   }
 }
 
@@ -561,7 +560,7 @@ button {
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.03em;
-  background-color: var(--accent-color);
+  background: radial-gradient(circle, rgba(214, 155, 201, 0.958719) 14%, #0093ff 86%);
   color: var(--white-color);
   cursor: pointer;
   font-family: inherit;
@@ -570,6 +569,12 @@ button {
   overflow: hidden;
   border: 0;
   padding: 10px 32px;
+}
+
+.main-button:hover {
+  background: inherit;
+  box-shadow: 0 0 30px 30px aqua;
+  color: aquamarine;
 }
 
 /* ---------------------------------------------Modal--------------------------------- */
@@ -860,6 +865,7 @@ button {
 }
 
 .main-second-title {
+  text-align: center;
   font-weight: 700;
   line-height: 1.14;
   font-size: inherit;
@@ -874,7 +880,8 @@ button {
 }
 
 .main-second-text {
-  color: var(--primary-white-color);
+  color: #00d9ff;
+  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -891,7 +898,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f5f4fa;
+  background-color: inherit;
 }
 
 .main-card-list {
@@ -966,7 +973,6 @@ button {
 }
 
 .team-section {
-  background-color: var(--button-background);
   padding: 60px 0;
 }
 
@@ -1014,13 +1020,13 @@ button {
   line-height: 1.2;
   text-align: center;
   margin-top: 10px;
-  color: var(--primary-white-color);
+  color: #00d9ff;
 }
 
 .card {
-  background-color: white;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+  background: inherit;
+  box-shadow: 0 10px 20px #0e2438;
+  border-radius: 25px;
 }
 
 .card-content {
@@ -1045,7 +1051,7 @@ button {
 .card-social-link {
   width: 44px;
   height: 44px;
-  background-color: var(--white-color);
+  background: linear-gradient(128deg, rgba(121, 9, 96, 0.958719) 10%, rgba(247, 0, 255, 0.757038) 86%);
   justify-content: center;
   border-radius: 50%;
   color: #afb1b8;
@@ -1053,8 +1059,10 @@ button {
 }
 
 .card-social-link:hover, .card-social-link:focus {
-  background-color: var(--accent-color);
   color: var(--white-color);
+  background: linear-gradient(128deg, rgba(214, 155, 201, 0.958719) 10%, #f700ff 86%);
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 10px 10px 25px 10px #bd0df3, -10px -10px 30px 10px #32a8f1;
 }
 
 .card-team_image {
@@ -1147,9 +1155,10 @@ button {
 }
 
 .card-clients-link:hover, .card-clients-link:focus {
-  background-color: var(--white-color);
-  color: var(--accent-color);
+  background-color: inherit;
+  color: black;
   border-color: var(--accent-color);
+  box-shadow: 0px 0px 30px #0c08f3;
 }
 
 /* -------------Footer -------------*/
@@ -1234,13 +1243,16 @@ button {
   width: 200px;
   height: 50px;
   padding: 10px 28px 10px 29px;
-  box-shadow: 0px, 4px rgba(0, 0, 0, 0.15);
 }
 
 @media screen and (max-width: 1190px) {
   .mailing-submit {
     margin: 0 auto;
   }
+}
+
+.mailing-submit:hover {
+  box-shadow: 0px 0px 20px #9999d3, 0 0 20px red;
 }
 
 .mailing-footer {
@@ -1273,6 +1285,10 @@ button {
     width: 358px;
     margin-right: 12px;
   }
+}
+
+.mailing-footer:hover, .mailing-footer:focus {
+  box-shadow: 0px 0px 30px #9999d3, 0 0 20px red;
 }
 
 .submit-icon {
@@ -1339,10 +1355,12 @@ button {
 
 .footer-card-link:hover, .footer-card-link:focus {
   background-color: var(--accent-color);
+  box-shadow: 0px 0px 30px #9999d3, 0 0 20px red;
 }
 
 /* -------------------------------------Portfolio------------------------ */
 .title {
+  text-align: center;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -1352,9 +1370,10 @@ button {
 
 /* Текст портфолио */
 .text {
+  text-align: center;
   font-size: 16px;
   line-height: 1.8;
-  color: var(--title-text-color);
+  color: #00d9ff;
 }
 
 /* -------------------------- Main -------portfolio----*/
@@ -1398,7 +1417,9 @@ button {
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.03em;
-  background-color: var(--button-background);
+  color: #00d9ff;
+  background: inherit;
+  box-shadow: 0 0 25px red;
   cursor: pointer;
   font-family: inherit;
   margin-right: 8px;
@@ -1411,7 +1432,7 @@ button {
 }
 
 .button-item:hover, .button-item:focus {
-  background-color: var(--accent-color);
+  background: radial-gradient(circle, rgba(214, 155, 201, 0.958719) 14%, #0093ff 86%);
   color: var(--white-color);
   cursor: pointer;
   font-family: inherit;
@@ -1466,12 +1487,11 @@ button {
 
 .card-text {
   padding: 20px 24px;
-  border-right: 1px solid var(--border-card-portfolio);
-  border-left: 1px solid var(--border-card-portfolio);
-  border-bottom: 1px solid var(--border-card-portfolio);
 }
 
 .card-portfolio {
+  border-radius: 25px;
+  box-shadow: 0px 0px 5px #efeff6;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1487,13 +1507,15 @@ button {
 .text-img-wrap {
   position: relative;
   overflow: hidden;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 
 .text-img {
   font-size: 18px;
   line-height: 1.5;
   color: var(--white-color);
-  background-color: rgba(33, 150, 243, 0.9);
+  background: linear-gradient(21deg, rgba(214, 155, 201, 0.958719) 39%, #00f1ff 86%);
   padding: 63px 24px;
   position: absolute;
   top: 0;
