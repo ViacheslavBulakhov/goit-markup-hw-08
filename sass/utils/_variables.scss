@@ -30,7 +30,7 @@
 
 body {
   color: var(--title-text-color);
-  
+  background-color: var(--white-color);
   font-family: Roboto, sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
@@ -107,5 +107,5 @@ button {
 }
 /* Main contant */
 .main {
-  background: radial-gradient(circle, rgba(92, 83, 232, 0.9363095580028886) 13%, rgba(121, 9, 96, 1) 66%, rgba(0, 255, 239, 1) 100%);
+  background-color: var(--white-color);
 }

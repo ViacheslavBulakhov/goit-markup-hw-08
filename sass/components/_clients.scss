@@ -71,9 +71,8 @@
   }
   &-link:hover,
   &-link:focus {
-    background-color: inherit;
-    color: black;
+    background-color: var(--white-color);
+    color: var(--accent-color);
     border-color: var(--accent-color);
-    box-shadow: 0px 0px 30px #0c08f3;
   }
 }

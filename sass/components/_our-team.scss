@@ -16,6 +16,7 @@
   }
 
   &-section {
+    background-color: var(--button-background);
     // padding-bottom: 94px;
     padding: 60px 0;
   }
@@ -59,13 +60,16 @@
 
     text-align: center;
     margin-top: 10px;
-    color: #00d9ff;
+    color: var(--primary-white-color);
   }
 }
 .card {
-  background:inherit;
-  box-shadow: 0 10px 20px rgb(14, 36, 56);
-  border-radius: 25px;
+  background-color: white;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  border-radius: 0px 0px 4px 4px;
 
   &-content {
     padding-top: 30px;
@@ -86,7 +90,7 @@
   &-social-link {
     width: 44px;
     height: 44px;
-    background: linear-gradient(128deg, rgba(121, 9, 96, 0.9587185215883228) 10%, rgba(247, 0, 255, 0.7570378493194152) 86%);
+    background-color: var(--white-color);
     @extend %center;
     justify-content: center;
 
@@ -98,10 +102,8 @@
   }
   &-social-link:hover,
   &-social-link:focus {
+    background-color: var(--accent-color);
     color: var(--white-color);
-    background: linear-gradient(128deg, rgba(214, 155, 201, 0.9587185215883228) 10%, rgba(247, 0, 255, 1) 86%);
-    -webkit-box-shadow: 5px 5px 15px 5px #000000;
-      box-shadow: 10px 10px 25px 10px #bd0df3, -10px -10px 30px 10px rgb(50, 168, 241);
   }
 }
 .card-team_image {
